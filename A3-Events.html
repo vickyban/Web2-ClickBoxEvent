@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>A3-Events</title>
+    <!--
+    Key Learnings:
+    Add event listener
+    Remove event listener
+    Timeouts /Intervals
+    Event Targeting using e.target
+    Targeting and modifying DOM elements
+    Simple Array
+    -->
+    
+    <style>
+      div{
+        width:200px;
+        height:200px;
+        background-color:green;
+        margin:20px;
+        float:left;
+        position: relative;
+      }
+      div > p {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        font-size: 2em;
+      }
+    
+      .boom{
+        background-color:red;
+        color: white;
+      }
+      .safe{
+        background-color:lightblue;
+      }
+      .timeout{
+        background-color:black;
+      }
+    
+    </style>
+</head>
+
+
+<body>
+  <p id="output">Part1. Create 4 boxes. The user must click on one of the boxes. However, one of the boxes is a trap. The trap box is random each time. If the user clicked on a safe box, change that box's colour to light blue. If the user clicked on the trap box, change that box's colour to red and update the content in this paragraph to "SAFE" (if the clicked box is safe) or "BOOM" (if the clicked box is a trap). Notice that I've already created the boxes for you and that CSS has been provided. It is expected that you apply this CSS where necessary.</p>
+
+  <p id="timesUp">Part 2. Start a 5 second countdown that updates this paragraph with a "Time's up!" message when the countdown is over. Remove the ability for the user to click on all boxes and change the background colour of the entire body to black.</p>
+
+  <p id="pickOne">Pick a box</p>
+  <div id="one"></div>
+  <div id="two"></div>
+  <div id="three"></div>
+  <div id="four"></div>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
